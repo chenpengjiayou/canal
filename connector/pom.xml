@@ -36,7 +36,7 @@
         <developerConnection>scm:git:git@github.com:alibaba/canal.git</developerConnection>
     </scm>
 
-    <repositories>
+    <!--<repositories>
         <repository>
             <id>central</id>
             <url>http://repo1.maven.org/maven2</url>
@@ -89,7 +89,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories>-->
 
     <modules>
         <module>kafka-connector</module>
@@ -114,7 +114,7 @@
         </plugins>
     </build>
 
-    <distributionManagement>
+    <!--<distributionManagement>
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
@@ -125,5 +125,5 @@
             <name>Nexus Release Repository</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement>-->
 </project>

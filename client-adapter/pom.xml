@@ -21,7 +21,18 @@
         <java_target_version>1.8</java_target_version>
         <file_encoding>UTF-8</file_encoding>
     </properties>
-
+    <distributionManagement>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>egenie-snapshots</name>
+            <url>http://47.108.201.215:9876/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>release</id>
+            <name>egenie-release</name>
+            <url>http://47.108.201.215:9876/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
     <modules>
         <module>common</module>
         <module>logger</module>
@@ -40,14 +51,14 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0</url>
         </license>
     </licenses>
-
+<!--
     <scm>
         <url>git@github.com:alibaba/canal.git</url>
         <connection>scm:git:git@github.com:alibaba/canal.git</connection>
         <developerConnection>scm:git:git@github.com:alibaba/canal.git</developerConnection>
-    </scm>
+    </scm>-->
 
-    <repositories>
+    <!--<repositories>
         <repository>
             <id>central</id>
             <url>http://repo1.maven.org/maven2</url>
@@ -100,7 +111,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories>-->
 
     <dependencyManagement>
         <dependencies>
@@ -268,7 +279,7 @@
         </plugins>
     </build>
 
-    <distributionManagement>
+    <!--<distributionManagement>
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
@@ -279,5 +290,5 @@
             <name>Nexus Release Repository</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement>-->
 </project>

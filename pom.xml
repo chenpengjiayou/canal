@@ -6,11 +6,7 @@
     <name>canal module for otter ${project.version}</name>
     <version>1.1.6-SNAPSHOT</version>
     <url>https://github.com/alibaba/canal</url>
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
+
     <developers>
         <developer>
             <name>agapple</name>
@@ -39,13 +35,13 @@
         </license>
     </licenses>
 
-    <scm>
+    <!--<scm>
         <url>git@github.com:alibaba/canal.git</url>
         <connection>scm:git:git@github.com:alibaba/canal.git</connection>
         <developerConnection>scm:git:git@github.com:alibaba/canal.git</developerConnection>
-    </scm>
+    </scm>-->
 
-    <repositories>
+    <!--<repositories>
         <repository>
             <id>central</id>
             <url>https://repo1.maven.org/maven2</url>
@@ -88,7 +84,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories>-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -108,7 +104,18 @@
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
     </properties>
-
+    <distributionManagement>
+        <snapshotRepository>
+            <id>deployment</id>
+            <name>egenie-snapshots</name>
+            <url>http://47.108.201.215:9876/repository/maven-snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>release</id>
+            <name>egenie-release</name>
+            <url>http://47.108.201.215:9876/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
     <modules>
         <module>common</module>
         <module>meta</module>
@@ -125,7 +132,7 @@
         <module>deployer</module>
         <module>example</module>
         <module>prometheus</module>
-        <module>admin</module>
+        <!--<module>admin</module>-->
         <module>client-adapter</module>
         <module>connector</module>
     </modules>
@@ -459,7 +466,7 @@
         </pluginManagement>
     </build>
 
-    <distributionManagement>
+    <!--<distributionManagement>
         <snapshotRepository>
             <id>sonatype-nexus-snapshots</id>
             <name>Sonatype Nexus Snapshots</name>
@@ -470,5 +477,5 @@
             <name>Nexus Release Repository</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
-    </distributionManagement>
+    </distributionManagement>-->
 </project>
